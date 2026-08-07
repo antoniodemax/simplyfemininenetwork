@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
-import { ArrowDown, Globe, MessageCircle, Share2 } from 'lucide-react'
+import { ArrowDown, Globe, MessageCircle, Share2, Heart } from 'lucide-react'
 import gsap from 'gsap'
 import { events, programs } from '../data/site'
 
@@ -83,6 +83,14 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="marquee-section" aria-label="Announcement">
+        <div className="marquee-track">
+          <span className="marquee-text">
+            EMPOWERING WOMEN THROUGH JUSTICE AND EDUCATION · EVERY WOMAN DESERVES DIGNITY · JOIN US IN MAKING A DIFFERENCE
+          </span>
+        </div>
+      </section>
+
       <section className="stats-strip">
         <div className="stat-card">
           <p>2025</p>
@@ -96,7 +104,11 @@ export default function HomePage() {
           <p>5+</p>
           <span>Signature programs improving dignity</span>
         </div>
-      </section>
+        <div className="stat-card stat-card-big">
+          <p>10,000+</p>
+          <span>Women empowered</span>
+        </div>
+      </section
 
       <section className="mission-section">
         <div className="mission-grid">
@@ -131,9 +143,14 @@ export default function HomePage() {
           <h2>Three doors into a bigger life.</h2>
         </div>
         <div className="programs-showcase-grid">
-          {programs.map((program) => {
+          {programs.map((program, index) => {
+            let gridArea;
+            if (index === 0) gridArea = '1 / 1 / 2 / 2';
+            else if (index === 1) gridArea = '2 / 1 / 3 / 2';
+            else if (index === 2) gridArea = '1 / 2 / 2 / 3';
+            else if (index === 3) gridArea = '1 / 3 / 3 / 4';
             return (
-              <article key={program.slug} className="program-card showcase-card">
+              <article key={program.slug} className="program-card showcase-card" style={{ gridArea }}>
                 <div
                   className="program-image"
                   style={{ backgroundImage: `linear-gradient(180deg, rgba(20,12,46,0.15), rgba(20,12,46,0.82)), url(${program.image})` }}
@@ -152,27 +169,6 @@ export default function HomePage() {
       </section>
 
       <section className="giving-section">
-        <div className="giving-grid">
-          <div className="giving-media">
-            <img
-              src="https://images.unsplash.com/photo-1542345812-d98b5cd6cf98?auto=format&fit=crop&w=900&q=80"
-              alt="Volunteer mentor and participant"
-            />
-            <div className="giving-badge">Care is a form of leadership.</div>
-          </div>
-          <div className="giving-copy">
-            <p className="eyebrow">Gift with intention</p>
-            <h2>A small gift can hold a great deal of possibility.</h2>
-            <p>
-              Whether it keeps a girl in school, equips a peer mentor, or helps a woman
-              find her way through the justice system — your generosity creates agency
-              and practical transformation.
-            </p>
-            <Link to="/donate" className="button button-primary">
-              Explore giving
-            </Link>
-          </div>
-        </div>
       </section>
 
       <section className="events-dark-section">
