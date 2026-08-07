@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
+import { ArrowDown, Globe, MessageCircle, Share2 } from 'lucide-react'
 import gsap from 'gsap'
 import { events, programs } from '../data/site'
 
@@ -36,7 +37,10 @@ export default function HomePage() {
         <div className="hero-image-layer" aria-hidden="true" />
         <div className="hero-foreground" />
         <div className="hero-copy-wrapper">
-          <span className="hero-eyebrow">Justice · Dignity · Agency</span>
+          <div className="hero-meta-row">
+            <span className="hero-eyebrow">Justice · Dignity · Agency</span>
+            <div className="hero-award-pill">Premium impact design</div>
+          </div>
           <h1 className="hero-title">
             <span className="hero-line">
               Restoring <span className="hero-keyword-1">Dignity.</span>
@@ -58,6 +62,23 @@ export default function HomePage() {
             <Link to="/programs" className="button button-secondary hero-cta hero-cta-outline">
               Explore programs
             </Link>
+          </div>
+          <div className="hero-footer-row">
+            <div className="hero-socials">
+              <a href="#" aria-label="Website">
+                <Globe size={18} />
+              </a>
+              <a href="#" aria-label="Messages">
+                <MessageCircle size={18} />
+              </a>
+              <a href="#" aria-label="Share">
+                <Share2 size={18} />
+              </a>
+            </div>
+            <div className="hero-scroll-indicator">
+              <span>Scroll</span>
+              <ArrowDown size={18} />
+            </div>
           </div>
         </div>
       </section>
