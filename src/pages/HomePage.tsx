@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
-import { ArrowDown, Globe, MessageCircle, Share2, Heart } from 'lucide-react'
+import { ArrowDown, Globe, MessageCircle, Share2 } from 'lucide-react'
 import gsap from 'gsap'
 import { events, programs } from '../data/site'
 
@@ -108,7 +108,7 @@ export default function HomePage() {
           <p>10,000+</p>
           <span>Women empowered</span>
         </div>
-      </section
+      </section>
 
       <section className="mission-section">
         <div className="mission-grid">

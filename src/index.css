@@ -532,7 +532,6 @@ a:focus-visible {
   max-width: 1200px;
   margin: 0 auto;
 }
-}
 
 .showcase-card {
   overflow: hidden;
@@ -802,9 +801,6 @@ a:focus-visible {
   font-size: 1.1rem;
 }
 
-.hero-actions {
-.hero-actions-cta .button {
-.hero-cta-outline {
 
 .hero-stats {
   display: none;
