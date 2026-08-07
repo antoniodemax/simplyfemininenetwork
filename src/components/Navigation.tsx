@@ -4,12 +4,13 @@ import { useEffect, useState } from 'react'
 import { Menu, X } from 'lucide-react'
 
 const navItems = [
-  { label: 'Home', to: '/' },
+  { label: 'About us', to: '/about' },
+  { label: 'Leadership', to: '/about' },
   { label: 'Programs', to: '/programs' },
-  { label: 'Events', to: '/events' },
   { label: 'Stories', to: '/stories' },
-  { label: 'Volunteer', to: '/volunteer' },
-  { label: 'Donate', to: '/donate' },
+  { label: 'Events', to: '/events' },
+  { label: 'Gallery', to: '/gallery' },
+  { label: 'Partners', to: '/partners' },
 ]
 
 export function Navigation() {
@@ -60,8 +61,8 @@ export function Navigation() {
               {item.label}
             </NavLink>
           ))}
-          <Link to="/contact" className="nav-cta">
-            Connect
+          <Link to="/donate" className="nav-cta">
+            Donate Now
           </Link>
         </nav>
       </div>

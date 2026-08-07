@@ -7,7 +7,7 @@ export const programs = [
     accent: 'Justice',
     icon: 'Scale',
     image:
-      'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80',
+      'https://images.unsplash.com/photo-1563257768-f7093b02f87b?auto=format&fit=crop&w=900&q=80',
   },
   {
     slug: 'sanitary-drives',
@@ -17,7 +17,7 @@ export const programs = [
     accent: 'Health',
     icon: 'Droplet',
     image:
-      'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=900&q=80',
+      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=80',
   },
   {
     slug: 'mentorship-leadership',
@@ -27,7 +27,17 @@ export const programs = [
     accent: 'Leadership',
     icon: 'Sparkles',
     image:
-      'https://images.unsplash.com/photo-1517841905240-472988babdf2?auto=format&fit=crop&w=900&q=80',
+      'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80',
+  },
+  {
+    slug: 'imara-her-project',
+    title: 'IMARA HER Project',
+    description:
+      'An integrated empowerment network for women returning from the justice system, built around mentorship, skills and dignified opportunity.',
+    accent: 'Empowerment',
+    icon: 'Users',
+    image:
+      'https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=900&q=80',
   },
 ]
 
