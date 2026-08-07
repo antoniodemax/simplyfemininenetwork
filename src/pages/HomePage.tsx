@@ -36,11 +36,15 @@ export default function HomePage() {
         <div className="hero-image-layer" aria-hidden="true" />
         <div className="hero-foreground" />
         <div className="hero-copy-wrapper">
-          <span className="hero-eyebrow">Journey · Equity · Renewal</span>
+          <span className="hero-eyebrow">Justice · Dignity · Agency</span>
           <h1 className="hero-title">
-            Restoring <span className="hero-keyword-1">Dignity.</span>
-            Empowering Women.
-            <span className="hero-keyword-2">Transforming</span> Communities.
+            <span className="hero-line">
+              Restoring <span className="hero-keyword-1">Dignity.</span>
+            </span>
+            <span className="hero-line">Empowering Women.</span>
+            <span className="hero-line">
+              <span className="hero-keyword-2">Transforming</span> Communities.
+            </span>
           </h1>
           <p className="hero-copy">
             We build safe pathways for justice, education and leadership while
@@ -54,13 +58,6 @@ export default function HomePage() {
             <Link to="/programs" className="button button-secondary hero-cta hero-cta-outline">
               Explore programs
             </Link>
-          </div>
-          <div className="hero-metadata">
-            <span>Kenya</span>
-            <span>•</span>
-            <span>Prison outreach & education</span>
-            <span>•</span>
-            <span>Community leadership</span>
           </div>
         </div>
       </section>

@@ -34,19 +34,11 @@ export function Navigation() {
       <div className="nav-shell">
         <Link to="/" className="brand">
           <span className="brand-mark">SFN</span>
-          <span>
-            Simply Feminine <small>Network</small>
+          <span className="brand-copy">
+            <strong>Simply Feminine Network</strong>
+            <small>Kenya · Germany</small>
           </span>
         </Link>
-
-        <button
-          className="nav-toggle"
-          type="button"
-          aria-label="Toggle navigation"
-          onClick={() => setOpen((current) => !current)}
-        >
-          {open ? <X size={24} /> : <Menu size={24} />}
-        </button>
 
         <nav className={`nav-links ${open ? 'nav-open' : ''}`} aria-label="Main navigation">
           {navItems.map((item) => (
@@ -61,10 +53,23 @@ export function Navigation() {
               {item.label}
             </NavLink>
           ))}
-          <Link to="/donate" className="nav-cta">
+          <Link to="/donate" className="nav-link nav-cta nav-cta-mobile">
             Donate Now
           </Link>
         </nav>
+
+        <Link to="/donate" className="nav-cta nav-cta-desktop">
+          Donate Now
+        </Link>
+
+        <button
+          className="nav-toggle"
+          type="button"
+          aria-label="Toggle navigation"
+          onClick={() => setOpen((current) => !current)}
+        >
+          {open ? <X size={24} /> : <Menu size={24} />}
+        </button>
       </div>
     </motion.header>
   )
