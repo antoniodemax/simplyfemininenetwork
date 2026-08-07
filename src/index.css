@@ -247,28 +247,26 @@ a:focus-visible {
   display: grid;
   align-items: center;
   overflow: hidden;
-  background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.04), transparent 26%),
-    radial-gradient(circle at 80% 18%, rgba(255, 255, 255, 0.06), transparent 18%),
-    linear-gradient(180deg, rgba(28, 14, 52, 0.82), rgba(38, 18, 70, 0.52));
+  background: linear-gradient(135deg, #2b0f4f 0%, #57267e 38%, #7b33a4 72%, #9f44bc 100%);
 }
 
 .hero-image-layer {
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(circle at top left, rgba(234, 160, 216, 0.12), transparent 24%),
-    radial-gradient(circle at 84% 22%, rgba(243, 108, 165, 0.14), transparent 16%),
-    linear-gradient(180deg, rgba(28, 14, 52, 0.88), rgba(33, 16, 66, 0.56)),
+  background-image: radial-gradient(circle at top left, rgba(255, 255, 255, 0.08), transparent 22%),
+    radial-gradient(circle at 78% 12%, rgba(248, 88, 149, 0.16), transparent 16%),
+    linear-gradient(180deg, rgba(36, 13, 83, 0.86), rgba(45, 16, 104, 0.54)),
     url('https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1800&q=80');
   background-size: cover;
-  background-position: 100% 52%;
-  filter: saturate(0.95) contrast(1.06);
+  background-position: 100% 50%;
+  filter: saturate(1.05) contrast(1.08);
   z-index: 1;
 }
 
 .hero-foreground {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(16, 10, 36, 0.65), rgba(16, 10, 36, 0.08));
+  background: linear-gradient(180deg, rgba(20, 10, 45, 0.72), rgba(73, 30, 120, 0.20));
   z-index: 2;
 }
 
