@@ -58,6 +58,14 @@ export const events = [
     time: '10:00',
     description: 'A global convening of changemakers, founders and justice advocates shaping systemic reform.',
   },
+  {
+    title: 'Community Justice Forum',
+    location: 'Kisumu',
+    date: '2027-03-15',
+    label: 'Mar 15',
+    time: '09:00',
+    description: 'Local leaders gather to discuss innovative approaches to gender-based violence prevention.',
+  },
 ]
 
 export const stories = [
@@ -73,6 +81,12 @@ export const stories = [
     image:
       'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80',
   },
+  {
+    title: 'Justice Beyond Bars',
+    subtitle: 'Her advocacy led to policy changes that now protect thousands of women nationwide.',
+    image:
+      'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80',
+  },
 ]
 
 export const gallery = [
@@ -81,6 +95,9 @@ export const gallery = [
   'https://images.unsplash.com/photo-1517841905240-472988babdf2?auto=format&fit=crop&w=900&q=80',
   'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=900&q=80',
   'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=80',
+  'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80',
+  'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80',
+  'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=900&q=80',
 ]
 
 export const partners = [
@@ -89,4 +106,7 @@ export const partners = [
   'Global Fund',
   'Nairobi Trust',
   'Justice Forward',
+  'Ford Foundation',
+  'Open Society Foundations',
+  'Deutsche Stiftung Weltbevölkerung'
 ]

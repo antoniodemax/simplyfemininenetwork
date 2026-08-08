@@ -1,31 +1,8 @@
-import { useMemo } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { motion } from 'framer-motion'
-import { MapPin } from 'lucide-react'
-
-const events = [
-  {
-    title: 'Annual Charity Gala Ball',
-    location: 'Nairobi',
-    date: '2026-11-22',
-    label: 'Nov 22',
-    description: 'An evening of culture, awards and funding for the next season of impact.',
-  },
-  {
-    title: "Women's Leadership Summit",
-    location: 'Berlin',
-    date: '2026-12-09',
-    label: 'Dec 09',
-    description: 'Global changemakers gather to explore justice, education and partnerships.',
-  },
-]
-
-function useCountdown(dateString: string) {
-  return useMemo(() => {
-    const diff = Math.max(0, Math.ceil((new Date(dateString).getTime() - Date.now()) / (1000 * 60 * 60 * 24)))
-    return `${diff} days`;
-  }, [dateString])
-}
+import PageHero from '../components/PageHero'
+import { events } from '../data/site'
+import { ArrowRight } from 'lucide-react'
 
 export default function EventsPage() {
   return (
@@ -34,44 +11,69 @@ export default function EventsPage() {
         <title>Events | Simply Feminine Network</title>
         <meta
           name="description"
-          content="View upcoming Simply Feminine Network events, including our Nairobi Gala Ball and global leadership summit."
+          content="Join us for upcoming gatherings that bring our community together to imagine change and celebrate progress."
         />
       </Helmet>
 
-      <motion.section
-        className="page-hero"
-        initial={{ opacity: 0, y: 18 }}
-        animate={{ opacity: 1, y: 0 }}
-      >
-        <span className="eyebrow">Events</span>
-        <h1>Experiences crafted to elevate women’s voices and funding momentum.</h1>
-        <p>
-          Join us for curated gatherings that build partnerships, celebrate courage,
-          and amplify the future of women-led justice and education.
-        </p>
-      </motion.section>
+      {/* PageHero */}
+      <PageHero
+        eyebrow="Change is easier to imagine when we gather."
+        title="Events that connect, inspire and mobilize"
+        titleAccent="connect, inspire and mobilize"
+        description="From intimate strategy sessions to large-scale convenings, our events create space for dialogue, partnership and collective action."
+      />
 
-      <div className="events-grid page-events-grid">
-        {events.map((event) => (
-          <motion.article key={event.title} className="event-card large" whileHover={{ y: -8 }}>
-            <div className="event-date-card">
-              <strong>{event.label}</strong>
-              <span>{event.location}</span>
-            </div>
-            <h2>{event.title}</h2>
-            <p>{event.description}</p>
-            <div className="event-meta">
-              <span>
-                <MapPin size={16} /> {event.location}
-              </span>
-              <span>{useCountdown(event.date)}</span>
-            </div>
-            <button type="button" className="button button-primary">
-              Reserve your seat
-            </button>
-          </motion.article>
-        ))}
-      </div>
+      {/* Events list */}
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="events-list-section"
+      >
+        <div className="page-shell">
+          <div className="events-list">
+            {events.map((event, index) => (
+              <motion.div
+                key={event.title}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.05 }}
+                className="event-row"
+              >
+                {/* Divider between rows (except first) */}
+                {index > 0 && <div className="event-divider" />}
+
+                <div className="event-row-content">
+                  {/* Date/label column */}
+                  <div className="event-date-column">
+                    <p className="event-label">{event.label}</p>
+                    <time dateTime={event.date}>
+                      {new Date(event.date).toLocaleDateString('en-US', {
+                        year: 'numeric',
+                        month: 'short',
+                        day: 'numeric'
+                      })}
+                    </time>
+                  </div>
+
+                  {/* Title + description */}
+                  <div className="event-details">
+                    <h3 className="event-title">{event.title}</h3>
+                    <p className="event-description">{event.description}</p>
+                  </div>
+
+                  {/* Circular arrow-icon link */}
+                  <div className="event-link-column">
+                    <a href="/contact" className="event-arrow-link" aria-label="Learn more about this event">
+                      <ArrowRight size={24} />
+                    </a>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </motion.section>
     </div>
   )
 }

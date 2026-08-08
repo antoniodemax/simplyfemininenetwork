@@ -3,39 +3,39 @@ import { motion } from 'framer-motion'
 import PageHero from '../components/PageHero'
 import WayWeWork from '../components/WayWeWork'
 
-export default function AboutPage() {
+export default function LeadershipPage() {
   return (
     <div className="page-shell page-content">
       <Helmet>
-        <title>About | Simply Feminine Network</title>
+        <title>Leadership | Simply Feminine Network</title>
         <meta
           name="description"
-          content="Learn about Simply Feminine Network's mission to restore dignity and empower women through justice reform, education, and outreach."
+          content="Meet the leaders who drive Simply Feminine Network's mission to restore dignity and empower women."
         />
       </Helmet>
 
       {/* PageHero */}
       <PageHero
-        eyebrow="Rooted in Kenya. Open to the world."
-        title="We stand alongside women, not in front of them."
-        titleAccent="alongside"
-        description="We believe in walking beside women as they rebuild their lives, offering solidarity rather than saviorism, and partnership rather than patronage."
+        eyebrow="The people who make possibility practical."
+        title="Leadership rooted in lived experience"
+        titleAccent="lived experience"
+        description="Our leadership team brings together decades of experience in justice reform, women's rights, and community organizing from across Kenya and Europe."
       />
 
-      {/* Split section: Image left, copy right */}
+      {/* Profile cards side by side */}
       <motion.section
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="about-section"
+        className="leadership-profiles-section"
       >
         <div className="page-shell">
-          <div className="impact-grid" style={{ gridTemplateColumns: '1fr 1fr', gap: '3rem' }}>
-            {/* Image placeholder */}
-            <div className="impact-card" style={{ textAlign: 'center' }}>
+          <div className="impact-grid" style={{ gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'start' }}>
+            {/* Profile Card 1 */}
+            <div>
               <div style={{
-                width: '200px',
-                height: '200px',
+                width: '180px',
+                height: '180px',
                 borderRadius: '50%',
                 background: 'linear-gradient(135deg, #3a1668 0%, #6d3399 100%)',
                 margin: '0 auto 1.5rem',
@@ -43,34 +43,17 @@ export default function AboutPage() {
                 alignItems: 'center',
                 justifyContent: 'center'
               }}>
-                {/* In real implementation, this would be an actual portrait photo */}
-                <span style={{
-                  color: 'white',
-                  fontSize: '1.5rem',
-                  fontStyle: 'italic'
-                }}>
-                  SFN
+                <span style={{ color: 'white', fontSize: '2rem', fontStyle: 'italic' }}>
+                  AM
                 </span>
               </div>
-              <h3 style={{
-                color: '#3a1668',
-                fontFamily: 'Playfair Display, serif',
-                fontSize: '1.5rem',
-                marginBottom: '0.5rem'
-              }}>
-                Portrait placeholder
-              </h3>
-            </div>
-
-            {/* Copy right */}
-            <div>
               <p className="eyebrow" style={{
                 color: '#F2528A',
                 fontSize: '0.875rem',
                 letterSpacing: '0.24em',
                 textTransform: 'uppercase',
                 fontWeight: '700',
-                marginBottom: '1rem',
+                marginBottom: '0.5rem',
                 display: 'inline-flex',
                 alignItems: 'center'
               }}>
@@ -81,28 +64,106 @@ export default function AboutPage() {
                   background: '#F2528A',
                   marginRight: '0.75rem'
                 }}></span>
-                We do not rescue. We stand alongside.
+                Founder & Executive Director
               </p>
-
+              <h2 style={{
+                color: '#3a1668',
+                fontFamily: 'Playfair Display, serif',
+                fontSize: '2rem',
+                lineHeight: '1.2',
+                marginBottom: '1rem',
+                display: 'inline-block'
+              }}>
+                Amina Moyo
+              </h2>
               <p style={{
                 fontSize: '1.125rem',
                 lineHeight: '1.7',
                 color: 'rgba(30, 27, 41, 0.78)',
-                marginBottom: '2rem'
+                marginBottom: '1.5rem'
               }}>
-                Founded in 2021 by a collective of Kenyan women lawyers, activists, and community leaders, Simply Feminine Network began as a response to the growing need for gender-responsive justice systems that truly center the lived experiences of women. What started as prison outreach programs in Nairobi has grown into a transnational organization working across Kenya and Europe to transform systems from within.
+                Amina brings 15 years of experience in human rights law and justice reform, having worked with international tribunals and grassroots organizations across East Africa. Her vision for SFN emerged from direct work with incarcerated women who deserved dignity, not pity.
+              </p>
+              <p style={{
+                fontSize: '1.125rem',
+                lineHeight: '1.7',
+                color: 'rgba(30, 27, 41, 0.78)'
+              }}>
+                Under her leadership, SFN has expanded from a single prison outreach program to a comprehensive network supporting women's leadership development, legal advocacy, and economic empowerment initiatives.
+              </p>
+            </div>
+
+            {/* Profile Card 2 */}
+            <div>
+              <div style={{
+                width: '180px',
+                height: '180px',
+                borderRadius: '50%',
+                background: 'linear-gradient(135deg, #3a1668 0%, #6d3399 100%)',
+                margin: '0 auto 1.5rem',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
+              }}>
+                <span style={{ color: 'white', fontSize: '2rem', fontStyle: 'italic' }}>
+                  JS
+                </span>
+              </div>
+              <p className="eyebrow" style={{
+                color: '#F2528A',
+                fontSize: '0.875rem',
+                letterSpacing: '0.24em',
+                textTransform: 'uppercase',
+                fontWeight: '700',
+                marginBottom: '0.5rem',
+                display: 'inline-flex',
+                alignItems: 'center'
+              }}>
+                <span style={{
+                  display: 'block',
+                  width: '3.5rem',
+                  height: '1px',
+                  background: '#F2528A',
+                  marginRight: '0.75rem'
+                }}></span>
+                Director of Programs
+              </p>
+              <h2 style={{
+                color: '#3a1668',
+                fontFamily: 'Playfair Display, serif',
+                fontSize: '2rem',
+                lineHeight: '1.2',
+                marginBottom: '1rem',
+                display: 'inline-block'
+              }}>
+                Johan Schneider
+              </h2>
+              <p style={{
+                fontSize: '1.125rem',
+                lineHeight: '1.7',
+                color: 'rgba(30, 27, 41, 0.78)',
+                marginBottom: '1.5rem'
+              }}>
+                Johan brings expertise in organizational development and international program management, having led humanitarian initiatives in conflict and post-conflict settings. His approach focuses on building sustainable systems that outlive any single intervention.
+              </p>
+              <p style={{
+                fontSize: '1.125rem',
+                lineHeight: '1.7',
+                color: 'rgba(30, 27, 41, 0.78)'
+              }}>
+                He oversees SFN's program portfolio, ensuring each initiative maintains the highest standards of effectiveness, ethical implementation, and genuine community partnership.
               </p>
             </div>
           </div>
         </div>
       </motion.section>
 
-      {/* Stat row: 2021 / NGO of the Year / Dignity first */}
+      {/* 3-stat inline row */}
       <motion.section
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="about-stats-section"
+        className="leadership-stats-section"
       >
         <div className="stats-strip" style={{
           margin: '3rem auto',
